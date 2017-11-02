@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         "Grapes"
     ]
     
+    // currentQuestionIndex keeps the current indices of the arrays
     var currentQuestionIndex: Int = 0
     
     // MARK: Action Methods
