@@ -32,6 +32,12 @@ class ViewController: UIViewController {
     // currentQuestionIndex keeps the current indices of the arrays
     var currentQuestionIndex: Int = 0
     
+    // MARK: Class Methods
+    func animateLabelTransitions() {
+        // Animate the alpha
+        UIView.animate(withDuration: 0.5, animations: { self.questionLabel.alpha = 1 }) // closure type ()->Void as animations: argument
+    }
+    
     // MARK: Action Methods
     
     @IBAction func showNextQuestion(_ sender: UIButton) {
@@ -43,6 +49,9 @@ class ViewController: UIViewController {
         let question: String = questions[currentQuestionIndex];
         questionLabel.text = question
         answerLabel.text = "???"
+        
+        // animate the question label transitions
+        animateLabelTransitions()
     }
     
     @IBAction func showAnswer(_ sender: UIButton) {
@@ -57,7 +66,12 @@ class ViewController: UIViewController {
         questionLabel.text = questions[currentQuestionIndex]
     }
     
+    // set the label's initial alpha
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        questionLabel.alpha = 0
+    }
     
-
 }
 
