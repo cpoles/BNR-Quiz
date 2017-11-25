@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsy-8Z-kcM">
-                                <rect key="frame" x="138.5" y="117" width="98" height="30"/>
+                                <rect key="frame" x="139" y="117" width="98" height="30"/>
                                 <state key="normal" title="Next Question"/>
                                 <connections>
                                     <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W9U-H7-ZQp"/>
@@ -44,23 +44,32 @@
                                     <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tQ7-Xl-Kgo"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GX3-3m-E7s">
+                                <rect key="frame" x="166" y="74" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bHm-xF-Y8j" firstAttribute="top" secondItem="Bsy-8Z-kcM" secondAttribute="bottom" constant="218" id="0f3-JI-u12"/>
                             <constraint firstItem="grI-6D-ARO" firstAttribute="centerX" secondItem="Bsy-8Z-kcM" secondAttribute="centerX" id="9WR-UA-8L9"/>
                             <constraint firstItem="1jA-cz-Rj0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="FA5-h7-Qws"/>
+                            <constraint firstItem="GX3-3m-E7s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="IOK-cG-9GY"/>
                             <constraint firstItem="grI-6D-ARO" firstAttribute="top" secondItem="bHm-xF-Y8j" secondAttribute="bottom" constant="32" id="NVc-fF-L3B"/>
                             <constraint firstItem="1jA-cz-Rj0" firstAttribute="centerX" secondItem="Bsy-8Z-kcM" secondAttribute="centerX" id="Qsr-xO-a0p"/>
                             <constraint firstItem="Bsy-8Z-kcM" firstAttribute="top" secondItem="1jA-cz-Rj0" secondAttribute="bottom" constant="21" id="cNb-89-DYC"/>
                             <constraint firstItem="bHm-xF-Y8j" firstAttribute="centerX" secondItem="Bsy-8Z-kcM" secondAttribute="centerX" id="jeS-qR-zet"/>
+                            <constraint firstItem="GX3-3m-E7s" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="upK-sw-LWF"/>
                             <constraint firstItem="1jA-cz-Rj0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wUY-Aa-whC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="bHm-xF-Y8j" id="fxY-Yi-e4t"/>
-                        <outlet property="questionLabel" destination="1jA-cz-Rj0" id="q80-Oo-JHj"/>
+                        <outlet property="currentQuestionLabel" destination="1jA-cz-Rj0" id="2at-WO-L3n"/>
+                        <outlet property="nextQuestionLabel" destination="GX3-3m-E7s" id="Zsd-VE-RRD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
